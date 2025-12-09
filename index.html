@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Главная – Amorelle</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600&family=Montserrat+Alternates:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <section class="with-limits header-content">
+        <h2 class="visually-hidden">Шапка сайта</h2>
+        <a href="index.html" class="logo">Amorelle</a>
+        <nav class="nav desktop-nav">
+          <a href="">кольца</a>
+          <a href="">серьги</a>
+          <a href="bracelets.html">браслеты</a>
+          <a href="">контакты</a>
+          <a href="">о&nbsp;нас</a>
+        </nav>
+        <nav class="icon-header desktop-icons">
+          <a href=""><img src="images/user.svg" alt="Профиль" class="icon"></a>
+          <a href=""><img src="images/like.svg" alt="Избранное" class="icon"></a>
+          <a href=""><img src="images/cart.svg" alt="Корзина" class="icon"></a>
+        </nav>
+
+        <!-- Бургер-кнопка (видна только на мобильных) -->
+        <label class="burger" for="burger-checkbox">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+
+        <!-- Мобильное меню (появляется при клике на бургер) -->
+        <div class="mobile-menu">
+          <nav class="mobile-nav">
+            <a href="">кольца</a>
+            <a href="">серьги</a>
+            <a href="">браслеты</a>
+            <a href="">контакты</a>
+            <a href="">о&nbsp;нас</a>
+          </nav>
+          <nav class="mobile-icons">
+            <a href=""><img src="images/user.svg" alt="Профиль" class="icon"></a>
+            <a href=""><img src="images/like.svg" alt="Избранное" class="icon"></a>
+            <a href=""><img src="images/cart.svg" alt="Корзина" class="icon"></a>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section  class="main-image">
+        <h2 class="visually-hidden">Заглавное изображение</h2>
+        <figure>
+          <img src="images/back1.jpg" alt="Фоновая картинка">
+        </figure>
+        <div class="text-overlay">
+          <article class="white-text with-limits">
+            <h1 headingoffset="1">Лучше, чем ты хотела</h1>
+            <p>Новая лимитированная коллекция украшений</p>
+            <button class="button-white">перейти к выбору</button>
+          </article>
+        </div>
+      </section>
+      <section class="with-limits">
+        <h2>Каталог</h2>
+        <div class="catalog">
+          <figure>
+            <a href=""><img src="images/Лабрадорит1.jpg" alt="Кольца"></a>
+            <figcaption>
+              <a href="">Кольца</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href=""><img src="images/КрыльяФеи1.jpg" alt="Серьги"></a>
+            <figcaption>
+              <a href="">Серьги</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href=""><img src="images/Суфле1.webp" alt="Браслеты"></a>
+            <figcaption>
+              <a href="">Браслеты</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <!-- <section class="with-limits">
+        <h2>Новинки</h2>
+        <article class="news">
+          <figure class="min-img">
+            <a href=""><img src="images/Терновник1.jpg" alt="Кольца"></a>
+          </figure>
+          <figure>
+            <a href=""><img src="images/Ягодка1.jpg" alt="Кольцо"></a>
+            <figcaption>
+              <a href=""><img src="images/left1.svg" alt="Налево" class="arrow"></a>
+              <article>
+                <a href="">Кольцо Ягодка</a>
+                <p>4900 ₽</p>
+              </article>
+              <a href=""><img src="images/right1.svg" alt="Направо" class="arrow"></a>
+            </figcaption>
+          </figure>
+          <figure class="min-img">
+            <a href=""><img src="images/Крылья феи1.jpg" alt="Серьги"></a>
+          </figure>
+        </article>
+      </section> -->
+
+
+
+<section class="with-limits">
+  <h2>Новинки</h2>
+
+  <div class="swiper news-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide" data-title="Кольцо с лабрадоритом" data-price="7500 ₽">
+        <figure><a href="#"><img src="images/Лабрадорит1.jpg" alt=""></a></figure>
+      </div>
+      <div class="swiper-slide" data-title="Кольцо Ягодка" data-price="4900 ₽">
+        <figure><a href="#"><img src="images/Ягодка1.jpg" alt=""></a></figure>
+      </div>
+      <div class="swiper-slide" data-title="Кольцо Терновник" data-price="5200 ₽">
+        <figure><a href="#"><img src="images/Терновник1.jpg" alt=""></a></figure>
+      </div>
+      <div class="swiper-slide" data-title="Серьги Крылья феи" data-price="6800 ₽">
+        <figure><a href="#"><img src="images/КрыльяФеи1.jpg" alt=""></a></figure>
+      </div>
+      <div class="swiper-slide" data-title="Кольцо с лабрадоритом" data-price="7500 ₽">
+        <figure><a href="#"><img src="images/Лабрадорит1.jpg" alt=""></a></figure>
+      </div>
+
+      <div class="swiper-slide" data-title="Кольцо Ягодка" data-price="4900 ₽">
+        <figure><a href="#"><img src="images/Ягодка1.jpg" alt=""></a></figure>
+      </div>
+
+    </div>
+
+    <div class="news-controls">
+      <div class="swiper-button-prev">
+        <img src="images/left1.svg" alt="Назад">
+      </div>
+
+      <div class="active-caption">
+        <article>
+          <h2 class="visually-hidden">Описание товара-новинки</h2>
+          <a href="#">Кольцо Ягодка</a>
+          <p>4900 ₽</p>
+        </article>
+      </div>
+
+      <div class="swiper-button-next">
+        <img src="images/right1.svg" alt="Вперёд">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- <section class="with-limits">
+        <h2>Новинки</h2>
+        <article class="news">
+          <figure class="min-img">
+            <a href=""><img src="images/Терновник1.jpg" alt="Кольца"></a>
+          </figure>
+          <figure>
+            <a href=""><img src="images/Ягодка1.jpg" alt="Кольцо"></a>
+          </figure>
+          <figure class="min-img">
+            <a href=""><img src="images/Крылья феи1.jpg" alt="Серьги"></a>
+          </figure>
+        </article>
+        <figcaption class="description">
+          <a href=""><img src="images/left1.svg" alt="Налево" class="arrow"></a>
+          <article>
+            <a href="">Кольцо Ягодка</a>
+            <p>4900 ₽</p>
+          </article>
+          <a href=""><img src="images/right1.svg" alt="Направо" class="arrow"></a>
+        </figcaption>
+      </section> -->
+
+
+
+
+
+      <!-- <section class="sales">
+        <article class="with-limits">
+          <div class="sales-text">
+            <h2>Лучшие предложения</h2>
+            <h3>Кольцо ромашка</h3>
+            <p>
+              Изящное кольцо с&nbsp;дизайном в&nbsp;виде цветка, выполненное из&nbsp;серебра. Центральный элемент украшен золотистым акцентом 
+              с&nbsp;текстурой. Легкая и&nbsp;воздушная конструкция с&nbsp;открытыми лепестками идеально подойдет для&nbsp;повседневного ношения 
+              или&nbsp;особого случая. Размер регулируемый.
+            </p>
+            <p class="price">Цена: 1800 ₽ <span>2400 ₽</span></p>
+            <article class="slider-num">
+              <a href=""><img src="images/white-left.svg" alt="Налево" class="arrow"></a>
+              <div class="slider-pages">
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="page">4</a>
+                <a href="#" class="page">5</a>
+                <a href="#" class="page">6</a>
+              </div>
+              <a href=""><img src="images/white-right.svg" alt="Направо" class="arrow"></a>
+            </article>
+          </div>
+        </article>
+        <figure class="product-sales">
+           <a href=""><img src="images/Ромашка2.webp" alt="Корзина"></a>
+        </figure>
+      </section> -->
+      <section class="sales">
+        <h2 class="visually-hidden">Лучшие предложения</h2>
+        <article class="with-limits">
+          <div class="sales-text">
+            <h2>Лучшие предложения</h2>
+            <h3 class="product-title">Кольцо ромашка</h3>
+            <p class="product-desc">
+              Изящное кольцо с&nbsp;дизайном в&nbsp;виде цветка, выполненное из&nbsp;серебра. Центральный элемент украшен золотистым акцентом 
+              с&nbsp;текстурой. Легкая и&nbsp;воздушная конструкция с&nbsp;открытыми лепестками идеально подойдет для&nbsp;повседневного ношения 
+              или&nbsp;особого случая. Размер регулируемый.
+            </p>
+            <p class="price">Цена: <span class="current-price">1800&nbsp;₽</span> <span class="old-price">2400&nbsp;₽</span></p>
+            <div class="slider-num">
+              <a href="#" class="arrow arrow-left"><img src="images/white-left.svg" alt="Налево"></a>
+              <div class="slider-pages">
+                <a href="#" class="page active" data-index="0">1</a>
+                <a href="#" class="page" data-index="1">2</a>
+                <a href="#" class="page" data-index="2">3</a>
+              </div>
+              <a href="#" class="arrow arrow-right"><img src="images/white-right.svg" alt="Направо"></a>
+            </div>
+          </div>
+          <figure class="product-sales">
+            <a href="#"><img src="images/Ромашка2.webp" alt="Продукт"></a>
+          </figure>
+        </article>
+      </section>
+
+      <section class="with-limits">
+        <h2>О&nbsp;нас</h2>
+        <article class="about">
+          <h2 class="visually-hidden">Описание компаниии</h2>
+          <div>
+            <p>
+              Привет! Меня зову Эвелина, я&nbsp;создательница бренда ювелирных украшений и&nbsp;бижутерии Amorelle.
+            </p>
+            <p>
+              Мы создаём утончённые дизайнерские ювелирные украшения и&nbsp;бижутерию ручной работы, наполненные нежностью и&nbsp;изяществом. 
+              Каждое изделие – это&nbsp;ваше воплощение творчества, призванное подчёркивать индивидуальность и&nbsp;приносить радость 
+              своим обладателям.
+            </p>
+            <p>
+              Мне важно, чтобы надевая наши украшения вы&nbsp;чувствовали себя увереннее и&nbsp;добавляли частичку эстетики в&nbsp;свою жизнь.
+            </p>
+            <p>
+              В каждую нашу коллекцию влюбляются с&nbsp;первого взгляда, а&nbsp;украшения становятся изюминкой любого образа.
+            </p>
+            <button class="button-white-back">подробнее о бренде</button>
+          </div>
+          <figure>
+            <img src="images/model1.jpg" alt="Эвелина">
+          </figure>
+        </article>
+      </section>
+      <section class="subscribe-form">
+        <h2>Будьте в курсе наших новинок!</h2>
+        <p>
+          Наши подписчики всегда самые первые узнают о новинках бренда<br>
+        </p>
+        <p>
+          <span>...а ещё получают специальные скидки, но только тссс!</span>
+        </p>
+
+        <form>
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="email" placeholder="Электронная почта" required>
+
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span>Я хочу получать рекламную рассылку</span>    
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span>Я соглашаюсь с обработкой персональных данных</span>
+          </label>
+
+          <button class="button-white-back">подписаться</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="with-limits">
+        <a href="" class="logo">Amorelle</a>
+        <div class="footer">
+          <article class="catalog-footer">
+            <h3>Каталог</h3>
+            <nav>
+              <a href="">кольца</a>
+              <a href="">серьги</a>
+              <a href="">браслеты</a>
+            </nav>
+          </article>
+          <article class="company-footer">
+            <h3>Компания</h3>
+            <nav>
+              <a href="">о нас</a>
+              <a href="">контакты</a>
+            </nav>
+          </article>
+          <article class="social">
+            <h2 class="visually-hidden">Обратная связь</h2>
+            <p>
+              По всем вопросам:<br>
+              +7 (911) 744-21-22
+            </p>
+            <p>
+              Мы в социальных сетях:
+            </p>
+            <nav>
+              <a href=""><img src="images/telegram.svg" alt="Telegram" class="icon"></a>
+              <a href=""><img src="images/vk.svg" alt="VK" class="icon icon-vk"></a>
+              <a href=""><img src="images/inst.svg" alt="Inst" class="icon"></a>
+              <a href=""><img src="images/pinterest.svg" alt="Pinterest" class="icon"></a>
+            </nav>
+          </article>
+        </div>
+        <p class="copy">&copy; Amorelle 2025. Все права защищены</p>
+      </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

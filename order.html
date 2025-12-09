@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bracelets.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="stylesheet" href="css/order.css">
+  <title>Оформление заказа – Amorelle</title>
+</head>
+
+<body>
+  <header>
+    <section class="with-limits header-grid">
+      <h2 class="visually-hidden">Шапка сайта</h2>
+      <a href="index.html" class="logo">Amorelle</a>
+      <nav class="nav desktop-nav">
+        <a href="#">кольца</a>
+        <a href="#">серьги</a>
+        <a href="bracelets.html">браслеты</a>
+        <a href="#">контакты</a>
+        <a href="#">о&nbsp;нас</a>
+      </nav>
+
+      <nav class="icon-header desktop-icons">
+        <a href="#"><img src="images/user.svg" alt="Профиль" class="icon"></a>
+        <a href="#"><img src="images/like.svg" alt="Избранное" class="icon"></a>
+        <a href="order.html"><img src="images/cart.svg" alt="Корзина" class="icon"></a>
+      </nav>
+
+      <!-- Бургер-меню -->
+      <label class="burger" for="burger-checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <input type="checkbox" id="burger-checkbox">
+
+      <!-- Меню для маленького экрана -->
+      <div class="mobile-menu">
+        <div class="mobile-nav">
+          <a href="#">кольца</a>
+          <a href="#">серьги</a>
+          <a href="#">браслеты</a>
+          <a href="#">контакты</a>
+          <a href="#">о&nbsp;нас</a>
+        </div>
+        <div class="mobile-icons">
+          <a href="#"><img src="images/user.svg" alt="Профиль"></a>
+          <a href="#"><img src="images/like.svg" alt="Избранное"></a>
+          <a href="#"><img src="images/cart.svg" alt="Корзина"></a>
+        </div>
+      </div>
+    </section>
+  </header>
+<main>
+  <section class="container-md py-5">
+    <h2 class="visually-hidden">Форма оформления заказа</h2>
+    <div class="card shadow-sm border-4" style="border-color: #E4A4B4; border-radius: 1rem;">
+      <section class="card-body p-4 p-md-5">
+        <h2 class="text-center mb-5">Оформление заказа</h2>
+
+        <form>
+          <div class="row g-4 mb-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control pink-input" placeholder="Имя" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control pink-input" placeholder="Фамилия" required>
+            </div>
+          </div>
+
+          <div class="row g-4 mb-3">
+            <div class="col-md-6">
+              <input type="tel" class="form-control pink-input" placeholder="Номер телефона" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control pink-input" placeholder="Электронная почта">
+            </div>
+          </div>
+
+          <!-- Город -->
+          <div class="mb-3">
+            <div class="dropdown">
+              <button class="form-select pink-select dropdown-toggle text-start" type="button" id="cityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Город
+              </button>
+              <ul class="dropdown-menu w-100 shadow-sm" style="border-radius: 1rem; border: none; margin-top: 8px;">
+                <li><a class="dropdown-item py-3" href="#">Санкт-Петербург</a></li>
+                <li><a class="dropdown-item py-3" href="#">Москва</a></li>
+                <li><a class="dropdown-item py-3" href="#">Другой город</a></li>
+              </ul>
+              <input type="hidden" name="city">
+            </div>
+          </div>
+
+          <!-- Способ доставки -->
+          <div class="mb-4">
+            <div class="dropdown">
+              <button class="form-select pink-select dropdown-toggle text-start" type="button" id="deliveryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Способ доставки
+              </button>
+              <ul class="dropdown-menu w-100 shadow-sm" aria-labelledby="deliveryDropdown" style="border-radius: 1rem; border: none; margin-top: 8px;">
+                <li><a class="dropdown-item py-3" href="#">Самовывоз — бесплатно</a></li>
+                <li><a class="dropdown-item py-3" href="#">Курьер по СПб — 300 ₽</a></li>
+                <li><a class="dropdown-item py-3" href="#">СДЭК</a></li>
+                <li><a class="dropdown-item py-3" href="#">Почта России</a></li>
+              </ul>
+              <input type="hidden" name="delivery">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <p class="fs-5 text-muted">Количество товаров:&nbsp;3</p>
+            <p class="fs-5 text-muted">Стоимость доставки:&nbsp;0&nbsp;₽</p>
+            <p class="fs-5 fw-bold" style="margin-top: 16px;">Итоговая стоимость: 10&nbsp;650&nbsp;₽</p>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="agree" required>
+            <label class="form-check-label text-muted" for="agree">
+              Я соглашаюсь с условиями обработки персональных данных и&nbsp;публичной офертой
+            </label>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="subscribe">
+            <label class="form-check-label text-muted" for="subscribe">
+              Хочу получать новости и&nbsp;специальные предложения
+            </label>
+          </div>
+
+          <!-- Кнопка -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-outline-primary px-5 py-3 fs-5 fw-semibold">
+              Перейти к&nbsp;оплате
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </section>
+</main>
+  <footer>
+    <div class="with-limits">
+        <a href="" class="logo">Amorelle</a>
+        <div class="footer">
+            <article class="catalog-footer">
+            <h3>Каталог</h3>
+            <nav>
+                <a href="">кольца</a>
+                <a href="">серьги</a>
+                <a href="">браслеты</a>
+            </nav>
+            </article>
+            <article class="company-footer">
+            <h3>Компания</h3>
+            <nav>
+                <a href="">о нас</a>
+                <a href="">контакты</a>
+            </nav>
+            </article>
+            <article class="social">
+              <h2 class="visually-hidden">Обратная связь</h2>
+              <p>
+                  По всем вопросам:<br>
+                  +7 (911) 744-21-22
+              </p>
+              <p>
+                  Мы в социальных сетях:
+              </p>
+              <nav>
+                  <a href=""><img src="images/telegram.svg" alt="Telegram" class="icon"></a>
+                  <a href=""><img src="images/vk.svg" alt="VK" class="icon icon-vk"></a>
+                  <a href=""><img src="images/inst.svg" alt="Inst" class="icon"></a>
+                  <a href=""><img src="images/pinterest.svg" alt="Pinterest" class="icon"></a>
+              </nav>
+            </article>
+        </div>
+        <p class="copy">&copy; Amorelle 2025. Все права защищены</p>
+    </div>
+  </footer>
+  <script>
+    // Кастомный селект на dropdown
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const button = this.closest('.dropdown').querySelector('.dropdown-toggle');
+        const hiddenInput = this.closest('.dropdown').querySelector('input[type="hidden"]');
+        const value = this.getAttribute('data-value');
+        const text = this.textContent.trim();
+
+        button.textContent = text;
+        hiddenInput.value = value;
+
+        // Убираем active у всех, добавляем текущему
+        this.closest('.dropdown-menu').querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+
+        // Закрываем дропдаун
+        const dropdown = bootstrap.Dropdown.getInstance(button);
+        dropdown.hide();
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

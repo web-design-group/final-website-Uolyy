@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600&family=Montserrat+Alternates:wght@300;400;500;600&display=swap');
+
+.with-limits {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #444444;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+/* ================= Header ================= */
+header {
+    position: sticky;
+    top: 0;
+    padding: 16px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    z-index: 5;
+    background-color: white;
+    margin-bottom: 45px;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto; /* логотип | навигация | иконки | бургер */
+    align-items: center;
+    gap: 2.2vw;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: 'Mali', sans-serif;
+    text-decoration: none;
+    color: #444444;
+}
+
+/* Навигация и иконки на большом экране */
+.desktop-nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1vw;
+    justify-content: center;
+}
+
+.desktop-icons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.8vw;
+}
+
+.desktop-icons img {
+    width: 34px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+}
+
+/* Бургер-кнопка */
+.burger {
+    display: none;
+    cursor: pointer;
+    grid-column: 4;
+}
+
+.burger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #444;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Чекбокс скрыт */
+#burger-checkbox {
+    display: none;
+}
+
+/* Бургер-меню */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.mobile-nav,
+.mobile-icons {
+    display: grid;
+    gap: 15px;
+}
+
+.mobile-nav a {
+    font-size: 18px;
+    text-align: center;
+}
+
+.mobile-icons {
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mobile-icons img {
+    width: 30px;
+}
+
+/* === Медиа-запрос для экрана < 800px === */
+@media (max-width: 799px) {
+    .header-grid {
+        grid-template-columns: auto 1fr auto; /* логотип | пусто | бургер */
+        gap: 1rem;
+    }
+
+    .desktop-nav,
+    .desktop-icons {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    #burger-checkbox:checked ~ .mobile-menu {
+        display: flex;
+    }
+}
+
+/* ============ Hover для Header ============ */
+a{
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: #E4A4B4;
+}
+
+a:active{
+    color:#4444447a;
+}
+
+.icon{
+    transition: filter 0.3s ease;
+}
+
+.icon:hover{
+    filter: brightness(0) saturate(100%);
+    filter: brightness(0) saturate(100%) invert(76%) sepia(11%) saturate(1095%) hue-rotate(298deg) brightness(96%) contrast(86%);;
+}
+
+.icon:active{
+    filter: opacity(60%);
+}
+
+
+/* Main --> Каталог */
+
+/* .catalog-header {
+    display: grid;
+    grid-template-columns: repeat(3, auto);   
+    justify-content: space-between;          
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;                      
+    padding: 0 10px;
+    margin-bottom: 40px;
+} */
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;          
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;                      
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+
+/* .catalog-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+@media (max-width: 799px) {
+    .catalog-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        justify-content: left;
+    }
+
+    .catalog-header h2 {
+        order: -1;
+        font-size: clamp(26px, 6vw, 32px);
+    }
+
+    .sort-btn,
+    .filter-btn {
+        width: 80%;
+        max-width: 300px;
+    }
+} */
+
+.sort-btn,
+.filter-btn {
+    display: flex;
+    gap: 10px;
+    background: white;
+    color:#444444;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 16px;
+    padding: 0.7vw 1.6vw;
+    border-radius: 0.8vw;
+    letter-spacing: 0.06em;
+    border: 3px solid #E4A4B4;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    font-weight: 500;
+}
+
+.sort-btn img,
+.filter-btn img {
+    width: 14px;
+    /* height: 20px; */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.filter-btn:hover, .sort-btn:hover{
+    background: linear-gradient(to bottom, #E4A4B4, #BE89BD);
+    color: white;
+}
+
+.filter-btn:active, .sort-btn:active{
+    background: #E4A4B4;
+    border-color: transparent;
+}
+
+/* ===== Товары  ===== */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(5px, 1.3vw, 1.3vw);
+    margin-bottom: 80px;
+}
+
+/* Карточка товара */
+.product-card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image:hover {
+    box-shadow: 0 0px 20px #e4a4b4a2;
+}
+
+/* Фото */
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    transition: all 0.35s ease;
+}
+
+.product {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.icon-product {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(0) saturate(100%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(102%) contrast(102%);
+    /* backdrop-filter: blur(8px); */
+}
+
+.like-btn {
+    top: 16px;
+    right: 16px;
+}
+
+.cart-btn {
+    bottom: 16px;
+    right: 16px;
+}
+
+.icon-product:hover {
+    filter: brightness(0) saturate(100%);
+    filter: brightness(0) saturate(100%) invert(98%) sepia(43%) saturate(4061%) hue-rotate(288deg) brightness(96%) contrast(89%);
+}
+
+/* Текст под фото */
+.product-name {
+    text-align: center;
+    cursor: pointer;
+    color: #444;
+    margin: 16px 20px 8px;
+}
+
+.product-price {
+    font-weight: 600;
+    font-size: clamp(19px, 2.6vw, 21px);
+    text-align: center;
+    color: #444;
+    margin: 0 20px 24px;
+}
+
+/* ============= Footer ============= */
+footer{
+    padding: 2vw 4vw;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, .08);
+}
+
+.footer{
+    display: grid;
+    gap: 0 5vw;
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* grid-template-columns: repeat(3, 1fr) */
+    /* grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    align-items: start;
+    gap: 40px 5vw;
+    margin-top: 20px;
+}
+
+footer .social{
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    /* grid-column: auto / span 2; */
+    /* grid-column: 4 / 6; */
+    gap: 0.5vw 0;
+}
+
+.catalog-footer nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw 0;
+}
+
+.company-footer nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw 0;
+}
+
+footer h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1vw;
+}
+
+footer article .logo{
+    display: block;
+    margin-bottom: 2vw;
+}
+
+.copy{
+    margin-top: 40px;
+}
+
+footer .icon{
+    width: 2.3vw;
+}
+
+.social nav{
+    display: flex;
+    gap: 0 0.8vw;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.social .icon{
+    /* width: 2.2vw; */
+    width: clamp(25px, 2.3vw, 2.3vw);
+}
+
+.social .icon-vk{
+    /* width: 2.6vw; */
+    width: clamp(29px, 2.6vw, 2.6vw);
+}

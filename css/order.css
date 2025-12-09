@@ -1,0 +1,156 @@
+.card-body {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.card {
+    max-width: 920px;
+    margin: auto;
+}
+
+.container-md {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding: 0;
+    /* background-color: #d692a5; */
+}
+
+/* h2 {
+    margin-bottom: 60px !important;
+} */
+
+header {
+    margin: 0;
+}
+
+.form-check {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: medium;
+}
+
+.pink-input {
+    background: #E4A4B4;
+    border: none;
+    color: white !important;
+    padding: 1rem 1.4rem;
+    font-size: clamp(16px, 1.6vw, 20px);
+    border-radius: 1rem;
+}
+
+.pink-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.pink-input:focus {
+    background: #d692a5;
+    box-shadow: none;
+}
+
+.pink-select {
+    border: 3px solid #E4A4B4;
+    border-radius: 1rem;
+    padding: 1rem 1.4rem;
+    font-size: clamp(16px, 1.6vw, 20px);
+    color: #444444;
+    /* background: url('images/откр.стрелка.png') no-repeat
+                right 1rem center / 14px auto; */
+}
+
+.pink-select:focus {
+    border-color: #d692a5;
+    box-shadow: none;
+}
+
+/* .form-check-input {
+    width: 24px !important;
+    height: 24px !important;
+    border: 2px solid #E4A4B4;
+    border-radius: 1rem;
+    cursor: pointer;
+} */
+
+.form-check-input {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #E4A4B4;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.form-check-input:checked {
+    background-color: #d692a5;
+    border-color: #d692a5d3;
+    box-shadow: none;
+}
+
+/* .form-check-label {
+    color: #444444af;
+    text-align: center;
+    font-size: clamp(14px, 1.4vw, 17px);
+} */
+
+.btn {
+    border-color: #E4A4B4;
+    color: #444444;
+    border-width: 3px;
+    border-radius: 1rem;
+    font-size: clamp(18px, 2vw, 22px);
+    padding: 18px 80px;
+    min-width: 320px;
+    background: white;
+}
+
+.btn:hover {
+    background: #E4A4B4;
+    color: white !important;
+    border-color: #d692a5d3;
+}
+
+.pink-select option {
+    background-color: #E4A4B4; 
+    color: white;
+}
+
+.pink-select option:hover {
+    background-color: #d692a5 !important;
+    color: white;
+    /* padding: 20px; */
+}
+
+.pink-select.dropdown-toggle {
+  background: url('images/откр.стрелка.png') no-repeat right 1rem center / 14px auto;
+}
+
+.pink-select.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1.4rem !important;
+  border-radius: 0.8rem !important;
+  transition: all 0.2s ease;
+  color: #444444;
+  font-size: clamp(16px, 1.6vw, 20px);
+}
+
+.dropdown-item:hover,
+.dropdown-item:active,
+.dropdown-item:focus {
+  background-color: #E4A4B4;
+  color: white;
+}
+
+.dropdown-item.active {
+  background-color: #d692a5;
+  color: white;
+}
